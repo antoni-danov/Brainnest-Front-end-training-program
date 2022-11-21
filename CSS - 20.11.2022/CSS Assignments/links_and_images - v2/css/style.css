@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(247, 247, 247);
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+}
+h1{
+    font-size:xx-large;
+}
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+a{
+    color: lightgreen;
+    font-size: larger;
+}
+img{
+    margin: 1% 18%;
+    border-radius: 15px;
+    border: 2px dotted blue;
+}
+.about_container{
+    color: black;
+}
+.about_container div{
+    border: 2px solid rgb(236, 114, 114);
+    border-radius: 15px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+.back_button{
+    margin: 5% 35%;
+    padding: 1% 14%;
+    background-color: tomato;
+    border-radius: 15px;
+}
+.back_button a{
+    text-decoration: none;
+    color: black;
+}

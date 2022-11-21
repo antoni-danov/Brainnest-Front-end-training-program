@@ -1,0 +1,18 @@
+.main{
+    border: brown 2px solid;
+}
+.heading_one{
+    color: yellow;
+}
+.heading_two{
+    color: rgb(248, 107, 12);
+}
+.heading_three{
+    color: #1863db;
+}
+.heading_four{
+    color: hsl(125, 54%, 47%);
+}
+h1, h2, h3, h4{
+    text-align: center;
+}
