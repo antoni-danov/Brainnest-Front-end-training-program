@@ -1,9 +1,11 @@
 function main() {
     const rules = ['rock', 'paper', 'scissors']
+
     var players = {
-        You: 0,
+        playerName: 0,
         CPU: 0
     };
+    var playerName = null;
 
     var messages = {
         playMessage: "Let's play! Make your choice (rock, paper or scissors): ",
@@ -34,7 +36,7 @@ function main() {
         if (playerCheck.length === computerCheck.length) {
             return `No winner! Both choosed the ${playerCheck}!`;
         } else if (playerCheck.length >= computerCheck.length) {
-            ++players.You;
+            ++players.playerName;
             return `You Win! ${playerCheck} beats ${computerCheck}!`;
         } else if (playerCheck.length <= computerCheck.length) {
             ++players.CPU;
@@ -42,7 +44,31 @@ function main() {
         }
     }
 
+    function finalResultsMessages(response) {
+        if (response === 'yes') {
+            if (players.playerName > players.CPU) {
+                console.log(`You are the winner from five games! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
+            } else if (players.playerName === players.CPU) {
+                console.log(`This time you made equal score! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
+            } else {
+                console.log(`You lose this time! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
+            }
+        } else {
+            if (players.playerName > players.CPU) {
+                console.log(`You are the winner from five games! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
+            } else if (players.playerName === players.CPU) {
+                console.log(`This time you made equal score! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
+            } else {
+                console.log(`You lose this time! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
+            }
+
+            console.log('See you next time ;)');
+        }
+    }
+
     function game() {
+
+        playerName = prompt("Please enter your name: ");
 
         for (let i = 1; i <= 5; ++i) {
 
@@ -62,33 +88,17 @@ function main() {
                     finalQuestion = prompt(messages.inccorectFinalQuestion);
                 }
 
-                if (finalQuestion === 'yes') {
-                    if (players.You > players.CPU) {
-                        console.log(`You are the winner from five games! Your final score is: ${players.You}; Computer: ${players.CPU}.`);
-                    } else if (players.You === players.CPU) {
-                        console.log(`This time you made equal score! Your final score is: ${players.You}; Computer: ${players.CPU}.`);
-                    } else {
-                        console.log(`You lose this time! Your final score is: ${players.You}; Computer: ${players.CPU}.`);
-                    }
+                finalResultsMessages(finalQuestion);
 
+                if (finalQuestion === 'yes') {
                     i = 0;
                     players.You = 0;
                     players.CPU = 0;
-                } else {
-                    if (players.You > players.CPU) {
-                        console.log(`You are the winner from five games! Your final score is: ${players.You}; Computer: ${players.CPU}.`);
-                    } else if (players.You === players.CPU) {
-                        console.log(`This time you made equal score! Your final score is: ${players.You}; Computer: ${players.CPU}.`);
-                    } else {
-                        console.log(`You lose this time! Your final score is: ${players.You}; Computer: ${players.CPU}.`);
-                    }
-
-                    console.log('See you next time ;)');
                 }
+
             }
+
         }
-
-
     }
 
     game();
