@@ -15,7 +15,7 @@ function main() {
     };
 
     function computerPlay() {
-        const min = 0;
+        const min = 1;
         const max = 30;
 
         var choice = Math.floor(Math.random() * (max - min + 1) + min);
@@ -44,25 +44,14 @@ function main() {
         }
     }
 
-    function finalResultsMessages(response) {
-        if (response === 'yes') {
-            if (players.playerName > players.CPU) {
-                console.log(`You are the winner from five games! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
-            } else if (players.playerName === players.CPU) {
-                console.log(`This time you made equal score! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
-            } else {
-                console.log(`You lose this time! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
-            }
-        } else {
-            if (players.playerName > players.CPU) {
-                console.log(`You are the winner from five games! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
-            } else if (players.playerName === players.CPU) {
-                console.log(`This time you made equal score! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
-            } else {
-                console.log(`You lose this time! ${playerName} your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
-            }
+    function finalResultsMessages() {
 
-            console.log('See you next time ;)');
+        if (players.playerName > players.CPU) {
+            console.log(`${playerName}, you are the winner! Your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
+        } else if (players.playerName === players.CPU) {
+            console.log(`${playerName}, this time you made equal score! Your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
+        } else {
+            console.log(`${playerName}, you lose this time! Your final score is: ${players.playerName}; Computer: ${players.CPU}.`);
         }
     }
 
@@ -88,12 +77,14 @@ function main() {
                     finalQuestion = prompt(messages.inccorectFinalQuestion);
                 }
 
-                finalResultsMessages(finalQuestion);
-
                 if (finalQuestion === 'yes') {
+                    finalResultsMessages();
+
                     i = 0;
-                    players.You = 0;
+                    players.playerName = 0;
                     players.CPU = 0;
+                } else {
+                    finalResultsMessages();
                 }
 
             }
