@@ -95,7 +95,8 @@ function main() {
         if (confirm(`${game.finalResultsMessages()} Would you like to play again?`)) {
             newGame();
         } else {
-            document.querySelector('btn btn-success').disabled = true;
+            alert('You will be redirected to the home page!');
+            document.location.reload();
         }
     }
     function newGame() {
