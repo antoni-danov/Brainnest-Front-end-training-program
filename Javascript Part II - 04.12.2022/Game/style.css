@@ -1,0 +1,68 @@
+body{
+    /* background-color: rgba(53, 69, 211, 0.952); */
+    background-image: url('stone-piece-point-table-up.jpg');     
+    background-size: cover;
+    color: white;
+}
+h1, h2, h3, .userInput{
+    text-align: center;
+}
+h1{
+    margin-top: 1%;
+    color: black;
+}
+h2{
+    margin-top: 5%;
+}
+h3{
+    margin: 1% 0% 4% 0%;
+}
+.userInput, .submitName{
+    margin: auto;
+    display: block;
+}
+.userInput{
+    margin-top: 8%;
+    padding: 10px 20px;
+    width: 20%;
+    border-radius: 5px;
+}
+.submitName{
+    padding: 10px 85px; 
+    margin: 6% 42.5%;
+    background-color:rgb(231, 198, 14);
+    border-radius: 5px;
+    border:1px solid grey;
+    color: white;
+
+}
+.mainSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn{
+    margin-top: 5%;
+    padding: 10px 55px;
+    border-radius: 10px;
+}
+.results{
+    padding: 2%;
+    background-color: greenyellow;
+    color: black;
+}
+.messages, .results{
+    text-align: center;
+    margin-top: 5%;
+
+    border: 2px white solid;
+    border-radius: 5px;
+    margin: 3% 25%;
+
+    font-size: x-large;
+    font-weight: bold;
+}
+.messages{
+    background-color: white;
+    color: black;
+}
