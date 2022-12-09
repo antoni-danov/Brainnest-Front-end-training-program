@@ -1,0 +1,38 @@
+.container{
+    background-color:aliceblue;
+    border: 1px double black;
+    border-radius:  15px;
+    width: 35%;
+    height: 15%;
+}
+.displaySection{
+    width: auto;
+    height: 200px;
+    margin-bottom: -5%;
+}
+.display{
+    background-color: rgb(227, 231, 233);
+    border-radius: 15px;
+    width: auto;
+    height: 89%;
+    margin-top: 3%;
+    padding: 20% 10%;
+    font-size: xxx-large;
+    text-align: end;
+}
+.controlSection{
+    display:  flex;
+    flex-direction: row;
+}
+.buttonSection{
+    border-radius: 15px;
+    width: 115%;
+}
+.btn{
+    border: 1px solid white;
+    width: 20%;
+    padding: 4%;
+    margin: 1%;
+    border-radius: 15%;
+    font-size: x-large;
+}
